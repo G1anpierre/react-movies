@@ -1,0 +1,16 @@
+
+h1 {
+  font: var(--baseFont);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 5.188rem;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.search-container {
+    flex: 1;
+}

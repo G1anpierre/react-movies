@@ -1,0 +1,20 @@
+
+.navigation__items {
+    display: flex;
+    list-style-type: none;
+    gap: 3rem;
+    padding: 0;
+    margin: 0;
+    font: var(--baseFont);
+    flex-shrink: 0;
+}
+
+
+.item {
+    font: var(--body-bold-2);
+}
+
+.item:active, .item:hover {
+    text-decoration: underline;
+    color: var(--primary);
+}

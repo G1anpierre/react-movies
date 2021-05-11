@@ -1,13 +1,29 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+:root {
+  --primary: #FED941;
+  --white: #FFFFFE;
+  --grey: #A7A9BE;
+  --background-20: #0F0E17;
+  --background-dark: #000000;
+  --basefontFamily: Lato, Helvetica, sans-serif;
+  --headline1: 800 3rem/normal var(--basefontFamily);
+  --headline2: 700 2.875rem/normal var(--basefontFamily);
+  --headline3: 700 2.313rem/normal var(--basefontFamily);
+  --headline4: 700 1.75rem/normal var(--basefontFamily);
+  --headline5: 700 1.563rem/normal var(--basefontFamily);
+  --body-bold: 700 1.125rem/normal var(--basefontFamily);
+  --body-regular: 400 1.125rem/normal var(--basefontFamily);
+  --body-bold-2: 700 1rem/normal var(--basefontFamily);
+  --body-regular-2: 400 1rem/normal var(--basefontFamily);
+  --button: 700 1.125rem/normal var(--basefontFamily);
+  --baseFont: normal 1rem/normal var(--basefontFamily);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+body {
+  background: var(--background-dark);
+  font: var(--basefont);
+  color: var(--white);
+  margin: 0;
+
 }

@@ -1,0 +1,53 @@
+
+.movie {
+    /* width: 220px; */
+    border: 1px solid green;
+    padding: .5rem;
+}
+
+
+.movie-wrapper {
+    position: relative;
+    padding-top: 149.25%;
+    border: 1px solid red;
+}
+
+.image-movie {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.movie-rating {
+    position: absolute;
+    top: 25px;
+    border-top: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
+    border-right: 1px solid var(--primary);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: .8rem 1rem .8rem 1.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    margin-right: .5rem;
+}
+
+.movie-description__title,
+.movie-description__text {
+    margin: 0;
+}
+
+.movie-description {
+    padding: .5rem;
+}
+
+
+
+
+
