@@ -7,15 +7,13 @@ import SwiperCore, {
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css"
 import "../../swipe-styles.css";
-import ImageMulan from '../../images/mulan.png';
-import ImageRaya from '../../images/raya.png';
-import ImageUnidos from '../../images/unidos.png';
+
 import CarruserItem from '../carrusel-item/carrusel-item';
 SwiperCore.use([Pagination]);
 
-const imageGroup = [ImageMulan, ImageRaya, ImageUnidos];
 
-const Carrusel = () => {
+
+const Carrusel = ({imageGroup}) => {
     return (
         <>
             <Swiper 

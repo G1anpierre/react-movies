@@ -1,0 +1,50 @@
+
+.button {
+    background: transparent;
+    height: 3rem;
+    padding: .625rem 1.5rem;
+    border: 1px solid var(--primary); 
+    text-transform: uppercase;
+    color: var(--white);
+    cursor: pointer;
+    transform: scale(1);
+    transition:.3s transform , .3s background, .3s color;
+}
+
+.button.primary {
+    background: var(--primary);
+    color: var(--background-dark);
+    font: var(--body-bold);
+    
+}
+
+.button.secondary {
+    background: var(--background-20);
+    color: var(--primary);
+    font: var(--body-bold);
+}
+
+.button.primary .icon-play,
+.button.secondary .icon-plus {
+    margin-right: 0.813rem;
+}
+
+.button.primary:hover {
+    background: var(--background-20);
+    color: var(--primary);
+}
+
+.button.secondary:hover {
+    background: var(--primary);
+    color: var(--background-dark);
+}
+
+.button.primary:active {
+    transform: scale(.98);
+}
+
+.button.secondary:active {
+    transform: scale(.97);
+    background: var(--background-dark);
+    color: var(--primary);
+}

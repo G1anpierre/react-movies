@@ -1,0 +1,13 @@
+
+
+.carrusel-image-wrapper {
+    position: relative;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    display: flex;
+    gap: 1rem;
+}

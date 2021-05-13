@@ -12,6 +12,7 @@
 
 .item {
     font: var(--body-bold-2);
+    cursor: pointer;
 }
 
 .item:active, .item:hover {
