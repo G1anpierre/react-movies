@@ -3,12 +3,12 @@ import HardKill from '../../images/Hard Kill.png';
 import Star from '../../images/Vector.png';
 import './movie.css';
 
-const movie = ({ movie: {name: movieName, description: movieDescription} }) => {
+const movie = ({ movie: {name: movieName, description: movieDescription, image: movieImage} }) => {
 
     return (
         <div className="movie">
             <div className="movie-wrapper">
-                <img src={HardKill} className="image-movie" alt='hard kill'/>
+                <img src={movieImage} className="image-movie" alt='hard kill'/>
                 <div className="movie-rating">
                     <span className="star"><img src={Star} alt='star'/></span>
                     <span className="rating">7.1</span>

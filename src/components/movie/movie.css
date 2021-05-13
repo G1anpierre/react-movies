@@ -38,9 +38,14 @@
     margin-right: .5rem;
 }
 
+.movie-description__title {
+    min-height: 45px;
+}
+
 .movie-description__title,
 .movie-description__text {
     margin: 0;
+    font: var(--faceFont);
 }
 
 .movie-description {
