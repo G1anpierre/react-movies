@@ -1,13 +1,14 @@
 import React from 'react'
 import './navigation.css'
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 
 const Navigation = () => {
     return (
         <nav className="navigation">
             <ul className="navigation__items">
-                <li className="item active">Todas</li>
-                <li className="item">Mas valoradas</li>
-                <li className="item">Menos valoradas</li>
+                    <Link to="/" className="item">Todas</Link>
+                    <Link to="/masvaloradas" className="item">Mas valoradas</Link>
+                    <Link to="/menosvaloradas" className="item">Menos valoradas</Link>
             </ul>
         </nav>
     )

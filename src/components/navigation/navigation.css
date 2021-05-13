@@ -12,7 +12,9 @@
 
 .item {
     font: var(--body-bold-2);
+    color: var(--white);
     cursor: pointer;
+    text-decoration: none;
 }
 
 .item:active, .item:hover {
