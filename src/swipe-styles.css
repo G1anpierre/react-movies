@@ -17,6 +17,7 @@ body {
 .swiper-container {
   width: 100%;
   height: 100%;
+  padding-bottom: 25px;
 }
 
 .swiper-slide {
@@ -44,4 +45,13 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.swiper-container-horizontal .swiper-pagination .swiper-pagination-bullet{
+  bottom: 4px !important;
+  color: var(--grey) !important;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  color: var(--white) !important;
 }

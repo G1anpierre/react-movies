@@ -14,17 +14,49 @@ SwiperCore.use([Pagination]);
 
 
 const Carrusel = ({imageGroup}) => {
+
+    const data = {
+        slidesPerView: 1.2, 
+        centeredSlides: true,
+        spaceBetween: 30,
+        pagination: {
+            clickable: true,
+            // el: '.swiper-pagination',
+            // type: 'bullets',
+        },
+        loop: true,
+        loopFillGroupWithBlank: true,
+        navigation: true,
+        className: "mySwiper",
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+              },
+              480: {
+                slidesPerView: 1,
+                spaceBetween: 20
+              },
+              768: {
+                slidesPerView: 1.2,
+                spaceBetween: 20
+              },
+              1024: {
+                  slidesPerView: 1.2,
+                  spaceBetween: 30,
+              },
+              1200: {
+                  slidesPerView: 1.2,
+                  spaceBetween: 30,
+              }
+
+        }
+    }
+
     return (
         <>
             <Swiper 
-                slidesPerView={1.2} 
-                centeredSlides={true} 
-                spaceBetween={30}
-                pagination={{"clickable": true}} 
-                loop={true}
-                loopFillGroupWithBlank={true}
-                navigation={true}
-                className="mySwiper">
+                {...data}>
                 {imageGroup.map((element, index) => (
                     <SwiperSlide key={index}>
                         <CarruserItem image={element}/>
