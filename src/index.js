@@ -4,11 +4,13 @@ import './fonts.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createStore } from 'redux';
+import thunk from 'redux-thunk'
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 
 const initialState = {
   search: '',
+  data: [],
 }
 
 const reducer = (state=initialState, action) => {
@@ -18,12 +20,28 @@ const reducer = (state=initialState, action) => {
       return {
         ...state, search: action.payload
       }
+    case 'FETCHDATA':
+      console.log('enter REDUCER: ', action.payload);
+      return {
+        ...state, data: action.payload
+      }
     default:
       return state;
   }
 }
 
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const composeEnhancers = typeof window === 'object' &&
+window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?   
+  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+    // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
+  }) : compose;
+
+  const enhancer = composeEnhancers(
+    applyMiddleware(thunk),
+    // other store enhancers if any
+  );
+
+const store = createStore(reducer, enhancer);
 
 ReactDOM.render(
   <Provider store={store}>
