@@ -52,6 +52,6 @@ body {
   color: var(--grey) !important;
 }
 
-.swiper-pagination .swiper-pagination-bullet-active {
+.swiper-container-horizontal .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   color: var(--white) !important;
 }
