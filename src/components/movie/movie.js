@@ -1,5 +1,4 @@
 import React from 'react';
-import HardKill from '../../images/Hard Kill.png';
 import Star from '../../images/Vector.png';
 import './movie.css';
 
