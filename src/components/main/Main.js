@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { connect } from 'react-redux';
 import MovieGroup from '../movie-group/MovieGroup';
 import Title from '../title/Title';
@@ -6,12 +6,15 @@ import { fetchData } from '../../actions';
 import './main.css';
 
 const Main = ({searchWord, fetchInfo}) => {
+
+    const makeSearch = useCallback(() =>{
+        fetchInfo(searchWord)
+    }, [fetchInfo, searchWord])
     
 
     useEffect(() => {
-        console.log('inside useEffect: ', searchWord);
-        fetchInfo(searchWord)
-    }, [searchWord]);
+        makeSearch(searchWord);
+    }, [searchWord, makeSearch]);
 
     return (
         <div className="main">

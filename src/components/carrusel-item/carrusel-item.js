@@ -7,7 +7,7 @@ const CarruserItem = ({image}) => {
         <>
             <div className="carrusel-image-wrapper">
                 <picture>
-                    <source media="(min-width: 800px)" srcset={image} />
+                    <source media="(min-width: 800px)" srcSet={image} />
                     <img src={image} alt='mulan' width="1200" height="310"/>
                 </picture>
                 <div className="button-container">
