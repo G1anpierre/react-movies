@@ -1,5 +1,4 @@
 import React from 'react';
-import HardKill from '../../images/Hard Kill.png';
 import Star from '../../images/Vector.png';
 import './movie.css';
 
@@ -8,7 +7,7 @@ const movie = ({ movie: {name: movieName, description: movieDescription, image: 
     return (
         <div className="movie">
             <div className="movie-wrapper">
-                <img src={movieImage} className="image-movie" alt='hard kill'/>
+                <img src={movieImage} className="image-movie" alt={movieName} height="239px" width="353px"/>
                 <div className="movie-rating">
                     <span className="star"><img src={Star} alt='star'/></span>
                     <span className="rating">7.1</span>

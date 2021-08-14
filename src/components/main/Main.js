@@ -1,43 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import MovieGroup from '../movie-group/MovieGroup';
 import Title from '../title/Title';
+import { fetchData } from '../../actions';
 import './main.css';
 
-const Main = () => {
-
-    const [state, setState] = useState([]);
+const Main = ({searchWord, fetchInfo}) => {
     
 
     useEffect(() => {
-        getData();
-    }, []);
-
-    const getData = async() => {
-
-        try {
-
-            const results = await fetch('http://www.omdbapi.com/?apikey=f675dcb&s=batman');
-            const data = await results.json();
-            console.log('data: ', data);
-            setState(data.Search);
-        } catch(error) {
-            console.log(error);
-        }
-        // fetch('http://www.omdbapi.com/?apikey=f675dcb&s=batman')
-        // .then((success) => { success.json() } )
-        // .then((movies) => { 
-        //     console.log('movies : ',movies);
-        //     setState(movies);
-        //  } )
-        // .catch((error)=>{ console.log(error)});
-    }
+        console.log('inside useEffect: ', searchWord);
+        fetchInfo(searchWord)
+    }, [searchWord]);
 
     return (
         <div className="main">
             <Title />
-            <MovieGroup state={state}/>
+            <MovieGroup />
         </div>
     )
 }
 
-export default Main;
+const mapStateToProps = (state) => {
+    return {
+        searchWord: state.search
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchInfo: (searchWord) => dispatch(fetchData(searchWord))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Main);
