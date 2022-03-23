@@ -1,116 +1,81 @@
-
 .container {
-    width: 100%;
-    /* padding-right: 15px; */
-    /* padding-left: 15px; */
-    margin-right: auto;
-    margin-left: auto;
 }
 
-
 .movie-group-top {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-    /* gap: 1.5rem; */
-    /* margin-right: -15px; */
-    /* margin-left: -15px; */
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  /* gap: 1.5rem; */
+  /* margin-right: -15px; */
+  /* margin-left: -15px; */
 }
 
 .movie-group-bottom {
-    display: flex;
-    flex-wrap: wrap;
-    
+  display: flex;
+  flex-wrap: wrap;
 }
-
-.movie-group-top .movie-group__mov {
-    /* margin-left: .9285rem;
-    margin-right: .9285rem; */
-
-}
-
 
 .movie-group-bottom .movie-group__mov {
-    margin-left: .9285rem;
-    margin-right: .9285rem;
+  margin-left: 0.9285rem;
+  margin-right: 0.9285rem;
 }
-
 
 .movie-group__mov {
-    width: 200px;
+  width: 200px;
 }
 
-/* @media screen and (min-width: 768px) {
-    .md-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
-    }
-} */
-
-
-/* for movie-group top */
-
-
 .movie-group-top .movie-group__mov {
-    width: 50%;
-    gap: 1rem;
+  width: 50%;
+  gap: 1rem;
 }
 
 @media (min-width: 768px) {
-    .movie-group-top .movie-group__mov {
-        width: 25%;
-        gap: 1rem;
-    }
+  .movie-group-top .movie-group__mov {
+    width: 25%;
+    gap: 1rem;
+  }
 }
-
 
 /* fot container */
 
 @media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
+  .container {
+    max-width: 540px;
+  }
 }
-
 
 @media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
+  .container {
+    max-width: 720px;
+  }
 }
 
-
 @media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
+  .container {
+    max-width: 960px;
+  }
 }
 
 @media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
+  .container {
+    max-width: 1140px;
+  }
 }
 
 /* for movie group bottom */
 
 .small-6 {
-    width: calc(50% - 1.875rem);
+  width: calc(50% - 1.875rem);
 }
 
-
 @media screen and (min-width: 40em) {
-    .medium-4 {
-        width: calc(33.3333% - 1.875rem);
-    }
+  .medium-4 {
+    width: calc(33.3333% - 1.875rem);
+  }
 }
 
 @media screen and (min-width: 64em) {
-    .large-3 {
-        width: calc(25% - 1.875rem);
-    }
+  .large-3 {
+    width: calc(25% - 1.875rem);
+  }
 }
-
-
-
-
