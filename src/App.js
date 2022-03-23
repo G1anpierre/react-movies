@@ -19,7 +19,7 @@ const imageGroup = [ImageMulan, ImageRaya, ImageUnidos]
 function App() {
   useEffect(() => {
     const getData = async () => {
-      const response = await fetch('/message')
+      const response = await fetch('/all-movies')
       const data = await response.json()
       console.log('data from api: ', data)
     }

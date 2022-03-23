@@ -9,7 +9,7 @@ module.exports = function (app) {
   )
 
   app.use(
-    createProxyMiddleware('/message', {
+    createProxyMiddleware('/all-movies', {
       target: 'http://localhost:5000',
       changeOrigin: true,
     }),
